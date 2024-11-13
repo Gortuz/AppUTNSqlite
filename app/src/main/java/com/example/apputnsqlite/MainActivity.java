@@ -73,12 +73,13 @@ public class MainActivity extends AppCompatActivity {
         menu_bottom_navigation = bottom_navigation.getMenu();
         action_libros = menu_bottom_navigation.findItem(R.id.action_libros);
         action_autores = menu_bottom_navigation.findItem(R.id.action_autores);
+
         action_autores.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
                 // Acción para el ítem de autores
-                Intent intent = new Intent(MainActivity.this, MainActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+//                startActivity(intent);
                 return true;
             }
         });

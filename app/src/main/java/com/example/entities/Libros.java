@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 public class Libros {
 
@@ -51,10 +52,13 @@ public class Libros {
             cursor = db.rawQuery("SELECT * FROM libros WHERE id=" + id, null);
             if (cursor.moveToFirst()) {
                 registro = new Libro(cursor.getInt(0), cursor.getString(1), cursor.getInt(2), cursor.getString(3), cursor.getInt(4), cursor.getInt(5), cursor.getInt(6));
+            } else {
+                Log.println(Log.VERBOSE, "INFO", "CERRANDO CURSOR");
             }
         } finally {
             if (cursor != null) {
                 cursor.close();
+
             }
         }
         return registro;
