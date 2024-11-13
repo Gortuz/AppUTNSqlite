@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@android:color/white"
+    tools:context=".MainActivity"
+    android:id="@+id/main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp"
+        android:background="?android:attr/selectableItemBackground">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <!-- Botón Regresar -->
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackground"
+                android:src="@android:drawable/ic_menu_revert"
+                android:contentDescription="Regresar"
+                android:tint="@android:color/black"
+                android:onClick="cmdRegresar_onClick"/>
+
+            <!-- Título de la pantalla -->
+            <TextView
+                android:id="@+id/tv_titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingStart="8dp"
+                android:text="Usuario"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+        </LinearLayout>
+        <!-- Campo ID -->
+        <!-- Campo ID -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/et_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="ID"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <!-- Campo Nombres -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/et_nombres"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Nombres" />
+        </LinearLayout>
+
+        <!-- Campo Apellidos -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/et_apellidos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Apellidos" />
+        </LinearLayout>
+
+        <!-- Campo ISO País -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/et_isoPais"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="ISO País" />
+        </LinearLayout>
+
+        <!-- Campo Edad -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/et_edad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:hint="Edad" />
+        </LinearLayout>
+
+        <!-- Botones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp">
+
+            <!-- Botón Crear -->
+            <ImageButton
+                android:id="@+id/btn_crear"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginHorizontal="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_add"
+                android:contentDescription="Crear"
+                android:tint="@android:color/black"
+                android:onClick="onClick_Crear" />
+
+            <!-- Botón Leer -->
+            <ImageButton
+                android:id="@+id/btn_leer"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginHorizontal="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_search"
+                android:contentDescription="Buscar"
+                android:tint="@android:color/holo_blue_dark"
+                android:onClick="onClick_Leer" />
+
+            <!-- Botón Actualizar -->
+            <ImageButton
+                android:id="@+id/btn_actualizar"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginHorizontal="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_edit"
+                android:contentDescription="Actualizar"
+                android:tint="@android:color/holo_orange_dark"
+                android:onClick="onClick_Actualizar" />
+
+            <!-- Botón Borrar -->
+            <ImageButton
+                android:id="@+id/btn_borrar"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginHorizontal="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_delete"
+                android:contentDescription="Borrar"
+                android:tint="@android:color/holo_red_dark"
+                android:onClick="onClick_Borrar" />
+        </LinearLayout>
+
+
+        <TableLayout
+            android:id="@+id/tb_libros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:stretchColumns="1"
+            android:background="@android:color/white"
+            android:divider="@android:color/black"
+            android:showDividers="middle">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/darker_gray">
+                <TextView
+                    android:text="ID"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    />
+                <TextView
+                    android:text="Título"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:textColor="@color/white"
+                    />
+                <TextView
+                    android:text="Año"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:textColor="@color/white"
+                    />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <!-- Barra de navegación inferior -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="1dp"
+        android:background="@color/white"
+        android:padding="0dp"
+        app:menu="@menu/bottom_nav_menu"
+        />
+</RelativeLayout>
